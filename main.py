@@ -34,11 +34,13 @@ print("Resultados Ada Boosting Pregunta 1.a")
 resultados_potabilidad_ada_boosting
 
 instancia_gbc = GradientBoostingClassifier(n_estimators=100,min_samples_split=2, random_state=0)
+
 analisis_potability_gbc = Analisis_Predictivo(potability_df,predecir= "Potability",modelo=instancia_gbc,train_size= 0.75, random_state = 0)
+resultados_potabilidad_gbc= analisis_potability_gbc.fit_predict_resultados()
 
 
 print("Resultados GBC Pregunta 1.a")
-analisis_potability_gbc
+resultados_potabilidad_gbc
 
 print("Resultados Ada Boosting Pregunta 1.b")
 print("Importancia de de variables Ada boosting")
